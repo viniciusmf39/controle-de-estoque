@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body { 
+    overflow-x: hidden;
+}
+
+$navegacao: rgb(24, 116, 57);
+
+@mixin fonts($size, $weight, $color) {
+    font-family: cursive;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+#btnInsertProduct{
+    background-color: $navegacao;
+    @include fonts(20px, 900, white);
+
+    &:hover {
+        background-color: white;
+        border: 2px solid $navegacao;
+        @include fonts(20px, 900, black);
+    }
+}
+
+.navegacao {
+    @include fonts(20px, 900, white);
+    background-color: $navegacao;
+}
+
+.products {
+    padding: 8px;
+    @include fonts(14px,800, black);
+}
+
+.productsHtml {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+label {
+    padding-top: 10px;
+    @include fonts(16px, 900, black);
+}
+
+.texto-input {
+    padding: 0.5px;
+    width: 100px;
+    margin: 4px auto;
+    text-align: center;
+    @include fonts(15px, 600, black);
+}
+
+.perishable {
+    width: 100%;
+    height: 25px;
+}

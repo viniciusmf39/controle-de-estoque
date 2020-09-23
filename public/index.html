@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desafio Controle de Estoque - Front-End </title>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="sweet.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navegacao">
+        <span class="navbar-brand ml-5">Controle de Estoque</span>
+    </nav>
+    <div class="back-controle">
+        <form>
+            <div class="form-row align-items-center justify-content-center">
+                <div class="col-auto">
+                    <label for="txtName"> Nome </label>
+                    <input class="form-control mb-2 texto-input" type="text" id="txtName">
+                </div>
+                <div class="col-auto">
+                    <label for="txtBrand"> Marca </label>
+                    <input class="form-control mb-2 texto-input" type="text" id="txtBrand">
+                </div>
+                <div class="col-auto">
+                    <label for="txtQtd"> Quantidade </label>
+                    <input class="form-control mb-2 texto-input" type="number" id="txtQtd">
+                </div>
+                <div class="col-auto mb-5">
+                    <label> Marque se for perecível: </label>
+                    <br>
+                    <input type="checkbox" id="perishable" class="form-check-input perishable">
+                </div>
+            </div>
+            <br>
+            <button type="submit" id="btnInsertProduct" class="btn btn-lg btn-block">Inserir Produto</button>
+        </form>
+    </div>
+    <br>
+    <div >
+        <div class="productsHtml" id="productBoard"></div>
+    </div>
+
+    <div class="modal fade" id="modalProduct" tabindex="-1" role="dialog" aria-labelledby="modalProduct" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header  navegacao">
+                    <h5 class="modal-title" id="modalProduct">Editar dados do produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true" style="color: white;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form data-form>
+                    <div class="form-group">
+                        <label for="txtNameModal" class="col-form-label"> Nome </label>
+                        <input class="form-control mb-2 texto-input" type="text" id="txtName">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtBrandModal" class="col-form-label"> Marca </label>
+                        <input class="form-control mb-2 texto-input" type="text" id="txtBrand">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtQtdModal" class="col-form-label"> Quantidade </label>
+                        <input class="form-control mb-2 texto-input" type="number" id="txtQtd">
+                    </div>
+                    <div class="form-group">
+                        <label> Marque se for perecível:
+                            <input type="checkbox" id="perishableModal" class="form-check-input perishable">
+                        </label>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer"> 
+                    <button type="button" class="btn btn-success" id="btnUpdateProduct">Salvar alterações</button>
+                    <button type="submit" class="btn btn-dark" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
